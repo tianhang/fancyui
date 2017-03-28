@@ -1,0 +1,7 @@
+<ul class="row f-pagination">
+  <li><a href="javascript:;" ng-click="vm.firstOne()" ng-disabled="vm.previousDisabled"><<</a></li>
+  <li><a href="javascript:;" ng-click="vm.previous()" ng-disabled="vm.previousDisabled"><</a></li>
+  <li ng-repeat="item in vm.pages track by $index" ng-click="vm.selectPage(item, $index)" ng-class="{'active':item.active}"><a href="javascript:;" data-ng-disabled="item.active">{{item.text}}</a></li>
+  <li><a href="javascript:;" ng-click="vm.next()" ng-disabled="vm.nextDisabled">></a></li>
+  <li><a href="javascript:;" ng-click="vm.lastOne()" ng-disabled="vm.nextDisabled">>></a></li>
+</ul>

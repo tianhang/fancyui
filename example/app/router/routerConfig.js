@@ -501,6 +501,19 @@ export default [
 		}
 	},
   {
+	name: 'pagination',
+	moduleName: {
+	  'en-us': 'pagination',
+	  'zh-cn': '分页'
+	},
+	url: "/component/pagination",
+	template: '<pagination></pagination>',
+	lazyload: require("bundle?lazy&name=loading!../components/pagination/pagination.js"),
+	tracking: {
+	  key: 'pagination'
+	}
+  },
+  {
     name: 'introduction',
     moduleName: {
       'en-us': 'Introduction',

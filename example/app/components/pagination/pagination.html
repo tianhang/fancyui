@@ -1,0 +1,142 @@
+<section class="intro-content">
+	<h1 translate='{{vm.$state.current.name}}'></h1>
+	<p>采用分页的形式分隔长列表，每次只加载一个页面</p>
+</section>
+
+<section class="intro-content">
+	<h2>{{'Install' | translate}}</h2>
+	<p></p>
+</section>
+
+<div class="example-block">
+<div class="highlight" hljs hljs-language="bash">
+npm install fancyui --save</div>
+</div>
+
+<section class="intro-content">
+	<h2>{{'Inject_Module' | translate}}</h2>
+	<p></p>
+</section>
+
+<div class="example-block">
+	<div class="highlight no-border" hljs hljs-language="javascript">
+		import paginationComponent from './pagination.component';
+		export default angular.module('pagination', [
+		Pagination.name
+		])
+		.component('pagination', paginationComponent);
+	</div>
+</div>
+
+<!--示例-->
+<h2>{{'Example'|translate}}</h2>
+<div class="example-block">
+	<div class="bs-example pop-confirm-example">
+		<f-pagination
+				source-data="1000"
+				page-size="5"
+				current-page="1"
+				limit-page="10"
+				ng-model="vm.page"
+				>
+		</f-pagination>
+	</div>
+</div>
+
+<!--基础用法-->
+<h2>{{'Basic_Usage'|translate}}</h2>
+<h3>View</h3>
+<div class="example-block">
+<div class="highlight no-border" hljs hljs-language="html">
+  <f-pagination
+	source-data="100"
+	page-size="5"
+	current-page="1"
+	limit-page="30"
+	ng-model="vm.page"
+	></f-pagination>
+</div>
+</div>
+
+<h3>controller</h3>
+
+<div class="example-block">
+<div class="highlight no-border" hljs hljs-language="javascript">
+  <!--export default class PaginationController {-->
+    <!--constructor() {-->
+    <!--'ngInject';-->
+	<!--}-->
+  <!--}-->
+</div>
+</div>
+<section class="intro-content">
+	<h2>{{'Options'|translate}}</h2>
+	<table class="demo-table">
+		<thead>
+		<tr>
+			<th>{{'Param'|translate}}</th>
+			<th>{{'Type'|translate}}</th>
+			<th>{{'Optional'|translate}}</th>
+			<th>{{'DefaultValue'|translate}}</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>sourceData</td>
+			<td>Number</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>pageSize</td>
+			<td>Number</td>
+			<td>-</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>currentPage</td>
+			<td>Number</td>
+			<td>-</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>limitPage</td>
+			<td>Number</td>
+			<td>-</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>ngModel</td>
+			<td>number</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>onChange</td>
+			<td>function</td>
+			<td>-</td>
+			<td>-</td>
+		</tr>
+		</tbody>
+	</table>
+</section>
+
+<section class="intro-content">
+	<h2>{{'Event'|translate}}</h2>
+	<table class="demo-table">
+		<thead>
+		<tr>
+			<th>{{'EventName'|translate}}</th>
+			<th>{{'Description'|translate}}</th>
+			<th>{{'Params'|translate}}</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>on-change</td>
+			<td>{{'SwitchEventDes'|translate}}</td>
+			<td>{{'SwitchEventParam'|translate}}</td>
+		</tr>
+		</tbody>
+	</table>
+</section>

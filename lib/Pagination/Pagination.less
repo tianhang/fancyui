@@ -1,0 +1,133 @@
+@import "../style/index.less";
+@import "../style/mixins/index.less";
+//
+//@pagination-prefix-cls: ~"@{ant-prefix}-pagination";
+//
+//@{pagination-prefix-cls}{
+//
+//}
+// 主容器, 乃侧边栏右边的容器, 此处定义他的背景色
+//@main-content-container-bg-color: #EEEEEE;
+//// 头部的高度
+//@header-height: 62px;
+//// menu
+//@menu-normal-width: 258px;
+//@menu-min-width: 50px;
+//// Font
+//@font-base-size: 14px;
+//@font-family-base: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//// panel
+//@panel-header-height: 50px;
+//@panel-content-padding: 20px;
+//@panel-body-min-height: 155px;
+//@panel-footer-min-height: 50px;
+//// button
+//@button-label-color: white;
+//@button-primary-bgcolor: #1a7dfc;
+//@button-primary-hover-bgcolor: #70c1fb;
+//@button-success-bgcolor: #5cd166;
+//@button-success-hover-bgcolor: #aedab2;
+//@button-danger-bgcolor: #f35856;
+//@button-danger-hover-bgcolor: #ff9a99;
+//// animation
+//@animation-hover-color: #547da9;
+//@animation-bgcolor-time: 300ms;
+//// state color
+//@error-color: #a94442;
+//
+//.pagination {
+//  li {
+//    a {
+//      width: 50px;
+//      height: 34px;
+//      line-height: 34px;
+//      text-align: center;
+//      color: rgba(0, 0, 0, .8);
+//      background-color: transparent;
+//      border-color:  @button-primary-bgcolor;
+//      transition: background-color 200ms ease-out;
+//      &:hover, &:focus {
+//        background-color: @button-primary-hover-bgcolor;
+//        border-color: @button-primary-bgcolor;
+//        color: white;
+//      }
+//    }
+//    &.active {
+//      a {
+//        color: #fff;
+//        cursor: default;
+//        background-color: @button-primary-hover-bgcolor;
+//        border-color: @button-primary-bgcolor;
+//        &:hover, &:focus {
+//          color: #fff;
+//          background-color: @button-primary-hover-bgcolor;
+//          border-color: @button-primary-bgcolor;
+//        }
+//      }
+//    }
+//    &.disabled {
+//      a {
+//        color: #b1b1b1;
+//        cursor: not-allowed;
+//        background-color: rgba(177, 177, 177, 0.50);
+//        border-color: @button-primary-bgcolor;
+//        &:hover, &:focus {
+//          color: #b1b1b1;
+//          background-color: rgba(177, 177, 177, 0.50);
+//          border-color: @button-primary-bgcolor;
+//        }
+//      }
+//    }
+//  }
+//}
+@{ant-prefix}-pagination {
+  ul{
+    margin: 10px;
+    overflow: hidden;
+    //border-radius: 4px;
+    display: inline-block;
+    &:nth-last-child(2){
+      //border-radius: 6px 0 0 6px;
+      border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray;
+    }
+    &:first-child{
+      border-left: 1px solid lightgray;
+      :hover{
+        border-right: 1px solid lightgray;
+      }
+    }
+    &:last-child{
+      //border-radius: 4px;
+    }
+    li{
+      float: left;
+      border: 1px solid lightgray;
+      border-left: 1px solid transparent;
+      &:hover{
+        border-left: 1px solid lightgray;
+      }
+      a{
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        display: inline-block;
+        text-decoration: none;
+        &:hover{
+          background-color: lightgray;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .active{
+    background-color: green;
+    //border: 1px solid green;
+    a{
+      color: #fff;
+    }
+  }
+
+}

@@ -577,5 +577,18 @@ export default [
     tracking: {
       key: 'breadcrumb'
     }
+  },
+  {
+    name: 'slider',
+    moduleName: {
+      'en-us': 'slider',
+      'zh-cn': '滑动输入条'
+    },
+    url: "/component/slider",
+    template: '<slider></slider>',
+    lazyload: require("bundle?lazy&name=slider!../components/Slider/Slider.js"),
+    tracking: {
+      key: 'slider'
+    }
   }
 ]
